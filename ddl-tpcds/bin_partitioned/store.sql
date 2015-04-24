@@ -5,4 +5,4 @@ drop table if exists store;
 
 create table store
 stored as ${FILE}
-as select * from ${SOURCE}.store;
+as select * from ${SOURCE}.store sort by 1;

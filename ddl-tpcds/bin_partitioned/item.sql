@@ -31,4 +31,4 @@ create table item
 stored as ${FILE};
 
 insert overwrite table item
-select * from ${SOURCE}.item;
+select * from ${SOURCE}.item sort by 1;

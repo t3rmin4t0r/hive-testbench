@@ -5,4 +5,4 @@ drop table if exists customer;
 
 create table customer
 stored as ${FILE}
-as select * from ${SOURCE}.customer;
+as select * from ${SOURCE}.customer sort by 1;

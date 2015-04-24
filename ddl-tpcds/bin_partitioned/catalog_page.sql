@@ -5,4 +5,4 @@ drop table if exists catalog_page;
 
 create table catalog_page
 stored as ${FILE}
-as select * from ${SOURCE}.catalog_page;
+as select * from ${SOURCE}.catalog_page sort by 1;
