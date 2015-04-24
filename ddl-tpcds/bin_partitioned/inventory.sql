@@ -5,8 +5,8 @@ drop table if exists inventory;
 
 create table inventory
 (
-    inv_date_sk         int,
-    inv_item_sk          int,
+    inv_date_sk         bigint,
+    inv_item_sk          bigint,
     inv_warehouse_sk		int,
     inv_quantity_on_hand	int
 )
