@@ -5,4 +5,4 @@ drop table if exists income_band;
 
 create table income_band
 stored as ${FILE}
-as select * from ${SOURCE}.income_band sort by 1;
+as select * from ${SOURCE}.income_band sort by ib_income_band_sk;

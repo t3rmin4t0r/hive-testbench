@@ -5,4 +5,4 @@ drop table if exists call_center;
 
 create table call_center
 stored as ${FILE}
-as select * from ${SOURCE}.call_center sort by 1;
+as select * from ${SOURCE}.call_center sort by cc_call_center_sk;

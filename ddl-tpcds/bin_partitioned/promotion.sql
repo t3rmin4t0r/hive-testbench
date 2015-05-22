@@ -5,4 +5,4 @@ drop table if exists promotion;
 
 create table promotion
 stored as ${FILE}
-as select * from ${SOURCE}.promotion sort by 1;
+as select * from ${SOURCE}.promotion sort by p_promo_sk;

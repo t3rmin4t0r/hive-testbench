@@ -5,4 +5,4 @@ drop table if exists reason;
 
 create table reason
 stored as ${FILE}
-as select * from ${SOURCE}.reason sort by 1;
+as select * from ${SOURCE}.reason sort by r_reason_sk;
