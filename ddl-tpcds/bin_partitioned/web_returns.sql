@@ -17,7 +17,7 @@ create table web_returns
     wr_returning_addr_sk      bigint,
     wr_web_page_sk            bigint,
     wr_reason_sk              bigint,
-    wr_order_number           int,
+    wr_order_number           bigint,
     wr_return_quantity        int,
     wr_return_amt             double,
     wr_return_tax             double,

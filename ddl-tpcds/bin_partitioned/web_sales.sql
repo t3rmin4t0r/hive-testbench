@@ -21,7 +21,7 @@ create table web_sales
     ws_ship_mode_sk           bigint,
     ws_warehouse_sk           bigint,
     ws_promo_sk               bigint,
-    ws_order_number           int,
+    ws_order_number           bigint,
     ws_quantity               int,
     ws_wholesale_cost         double,
     ws_list_price             double,

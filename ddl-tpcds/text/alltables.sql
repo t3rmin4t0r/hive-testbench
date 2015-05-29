@@ -79,7 +79,7 @@ create external table catalog_returns
     cr_ship_mode_sk           bigint,
     cr_warehouse_sk           bigint,
     cr_reason_sk              bigint,
-    cr_order_number           int,
+    cr_order_number           bigint,
     cr_return_quantity        int,
     cr_return_amount          double,
     cr_return_tax             double,
@@ -117,7 +117,7 @@ create external table catalog_sales
     cs_warehouse_sk           bigint,
     cs_item_sk                bigint,
     cs_promo_sk               bigint,
-    cs_order_number           int,
+    cs_order_number           bigint,
     cs_quantity               int,
     cs_wholesale_cost         double,
     cs_list_price             double,
@@ -279,10 +279,10 @@ drop table if exists inventory;
 
 create external table inventory
 (
-    inv_date_sk			int,
-    inv_item_sk			int,
-    inv_warehouse_sk		int,
-    inv_quantity_on_hand	int
+    inv_date_sk             bigint,
+    inv_item_sk             bigint,
+    inv_warehouse_sk        bigint,
+    inv_quantity_on_hand    int
 )
 row format delimited fields terminated by '|'
 location '${LOCATION}/inventory';
@@ -390,7 +390,7 @@ create external table store_returns
     sr_addr_sk                bigint,
     sr_store_sk               bigint,
     sr_reason_sk              bigint,
-    sr_ticket_number          int,
+    sr_ticket_number          bigint,
     sr_return_quantity        int,
     sr_return_amt             double,
     sr_return_tax             double,
@@ -420,7 +420,7 @@ create external table store_sales
     ss_addr_sk                bigint,
     ss_store_sk               bigint,
     ss_promo_sk               bigint,
-    ss_ticket_number          int,
+    ss_ticket_number          bigint,
     ss_quantity               int,
     ss_wholesale_cost         double,
     ss_list_price             double,
@@ -562,7 +562,7 @@ create external table web_returns
     wr_returning_addr_sk      bigint,
     wr_web_page_sk            bigint,
     wr_reason_sk              bigint,
-    wr_order_number           int,
+    wr_order_number           bigint,
     wr_return_quantity        int,
     wr_return_amt             double,
     wr_return_tax             double,
@@ -600,7 +600,7 @@ create external table web_sales
     ws_ship_mode_sk           bigint,
     ws_warehouse_sk           bigint,
     ws_promo_sk               bigint,
-    ws_order_number           int,
+    ws_order_number           bigint,
     ws_quantity               int,
     ws_wholesale_cost         double,
     ws_list_price             double,
