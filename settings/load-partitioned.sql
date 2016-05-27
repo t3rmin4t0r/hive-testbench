@@ -14,6 +14,9 @@ set mapreduce.input.fileinputformat.split.minsizee=240000000;
 set mapreduce.input.fileinputformat.split.minsize.per.node=240000000;
 set mapreduce.input.fileinputformat.split.minsize.per.rack=240000000;
 
+set tez.runtime.empty.partitions.info-via-events.enabled=true;
+set tez.runtime.report.partition.stats=true;
+
 -- set mapred.map.child.java.opts=-server -Xmx2800m -Djava.net.preferIPv4Stack=true;
 -- set mapred.reduce.child.java.opts=-server -Xms1024m -Xmx3800m -Djava.net.preferIPv4Stack=true;
 -- set mapreduce.map.memory.mb=3072;
