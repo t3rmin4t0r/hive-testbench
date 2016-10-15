@@ -5,13 +5,13 @@ drop table if exists item;
 
 create table item
 (
-    i_item_sk                 int,
+    i_item_sk                 bigint,
     i_item_id                 string,
-    i_rec_start_date          string,
-    i_rec_end_date            string,
+    i_rec_start_date          date,
+    i_rec_end_date            date,
     i_item_desc               string,
-    i_current_price           float,
-    i_wholesale_cost          float,
+    i_current_price           double,
+    i_wholesale_cost          double,
     i_brand_id                int,
     i_brand                   string,
     i_class_id                int,
@@ -31,4 +31,4 @@ create table item
 stored as ${FILE};
 
 insert overwrite table item
-select * from ${SOURCE}.item;
+select * from ${SOURCE}.item sort by i_item_sk;
